@@ -1,26 +1,26 @@
 {
     "paint": [
-        { "paint": "Silver", "price": 250 },
-        { "paint": "Midnight Blue", "price": 275 },
-        { "paint": "Firebrick Red", "price": 300 },
-        { "paint": "Spring Green", "price": 325 }
+        { "id": 1, "paint": "Silver", "price": 250 },
+        { "id": 2, "paint": "Midnight Blue", "price": 275 },
+        { "id": 3, "paint": "Firebrick Red", "price": 300 },
+        { "id": 4, "paint": "Spring Green", "price": 325 }
     ],
     "interior": [
-        { "interior": "Beige Fabric", "price": 500 },
-        { "interior": "Charcoal Fabric", "price": 505 },
-        { "interior": "White Leather", "price": 515 },
-        { "interior": "Black Leather", "price": 525 }
+        { "id": 1, "interior": "Beige Fabric", "price": 500 },
+        { "id": 2, "interior": "Charcoal Fabric", "price": 505 },
+        { "id": 3, "interior": "White Leather", "price": 515 },
+        { "id": 4, "interior": "Black Leather", "price": 525 }
     ],
     "technology": [
-        { "technology": "Basic Package", "price": 600 },
-        { "technology": "Navigation Package", "price": 650 },
-        { "technology": "Visibility Package", "price": 700 },
-        { "technology": "Ultra Package", "price": 750 }
+        { "id": 1, "technology": "Basic Package", "price": 600 },
+        { "id": 2, "technology": "Navigation Package", "price": 650 },
+        { "id": 3, "technology": "Visibility Package", "price": 700 },
+        { "id": 4, "technology": "Ultra Package", "price": 750 }
     ],
     "wheels": [
-        { "wheels": "17-inch Pair Radial", "price": 800 },
-        { "wheels": "17-inch Pair Radial Black", "price": 850 },
-        { "wheels": "18-inch Pair Spoke Silver", "price": 900 },
-        { "wheels": "18-inch Pair Spoke Black", "price": 950 }
+        { "id": 1, "wheels": "17-inch Pair Radial", "price": 800 },
+        { "id": 2, "wheels": "17-inch Pair Radial Black", "price": 850 },
+        { "id": 3, "wheels": "18-inch Pair Spoke Silver", "price": 900 },
+        { "id": 4, "wheels": "18-inch Pair Spoke Black", "price": 950 }
     ]
 }
