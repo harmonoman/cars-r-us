@@ -1,14 +1,19 @@
 import { getTransientState, setInterior } from "./transientState.js";
 
-export const DisplayInteriorOptions = () => {
-    const html = `<select id="interior">
-        <option value="" disabled selected>Choose an interior</option>
-        <option value="0">Beige Fabric</option>
-        <option value="1">Charcoal Fabric</option>
-        <option value="2">White Leather</option>
-        <option value="3">Black Leather</option>
-    </select>`;
+export const DisplayInteriorOptions = async () => {
+    const response = await fetch("http://localhost:8088/interior");
+    const interiors = await response.json();
 
+    let html = `<h2>Interiors</h2>`;
+
+    html += `<select id="interior">`;
+    html += `<option value="0">Select an interior</option>`;
+
+    for(const interior of interiors) {
+        html += `<option value=${interior.id}>${interior.interior}</option>`;
+    }
+
+    html += `</select>`;
     return html;
 }
 
@@ -23,4 +28,4 @@ document.addEventListener("change", (event) => {
         const transientState = getTransientState();
         console.log(transientState);
     }
-})
+});

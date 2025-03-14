@@ -1,16 +1,23 @@
 import { getTransientState, setPaint } from "./transientState.js";
 
-export const DisplayPaintOptions = () => {
-    const html = `<select id="paint">
-        <option value="" disabled selected>Choose a paint color</option>
-        <option value="0">Silver</option>
-        <option value="1">Midnight Blue</option>
-        <option value="2">Firebrick Red</option>
-        <option value="3">Spring Green</option>
-    </select>`;
+export const DisplayPaintOptions = async () => {
+    const response = await fetch("http://localhost:8088/paint");
+    const paints = await response.json();
+
+    let html = `<h2>Paints</h2>`;
+
+    html += `<select id="paint">`;
+    html += `<option value="0">Select a paint</option> `;
+
+    const arrayOfOptions = paints.map( (paint) => {
+        return `<option value="${paint.id}">${paint.paint}</option>`;
+    })
+
+    html += arrayOfOptions.join("");
+    html += `</select>`;
 
     return html;
-};
+}
 
 // Paints dropdown event listener
 document.addEventListener("change", (event) => {
