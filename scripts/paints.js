@@ -26,8 +26,5 @@ document.addEventListener("change", (event) => {
         const selectedOption = event.target.selectedOptions[0].textContent; 
         // Set transient state
         setPaint(selectedOption);
-
-        const transientState = getTransientState();
-        console.log(transientState);
     }
 })

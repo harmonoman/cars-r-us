@@ -26,3 +26,37 @@ export const setWheels = (selectedWheels) => {
 export const getTransientState = () => {
     return structuredClone(transientState);
 }
+
+// Reset transientState
+export const resetTransientState = () => {
+    transientState.interior = null;
+    transientState.paint = null;
+    transientState.technology = null;
+    transientState.wheels = null;
+}
+
+// PLace an order
+export const saveOrder = async () => {
+    const postOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(transientState)
+    } 
+
+    try {
+        const response = await fetch("http://localhost:8088/orders", postOptions);
+
+        if (!response.ok) {
+            throw new Error("Failed to place order!");
+        }
+
+        console.log("Order placed successfully!");
+        
+        resetTransientState();
+
+        document.dispatchEvent(new CustomEvent("stateChanged"));
+
+    } catch (error) {
+        console.log("Error:", error);
+    }
+}
