@@ -6,10 +6,10 @@ export const DisplayWheelOptions = async () => {
 
     let html = `<h2>Wheels</h2>`;
     html += `<select id="wheels">`;
-    html += `<option value="0">Select a Wheel</option>`;
+    html += `<option value="0">Select a wheel</option>`;
 
     const arrayOfOptions = wheels.map ( (wheel) => {
-        return `<option value="${wheel.id}>${wheel.wheel}</option>`;
+        return `<option value="${wheel.id}>${wheel.wheels}</option>`;
     })
 
     html += arrayOfOptions.join("");
@@ -25,9 +25,6 @@ document.addEventListener("change", (event) => {
         const selectedOption = event.target.selectedOptions[0].textContent; 
         // Set transient state
         setWheels(selectedOption);
-
-        const transientState = getTransientState();
-        console.log(transientState);
     }
 })
 

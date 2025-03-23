@@ -1,26 +1,176 @@
 {
-    "paint": [
-        { "id": 1, "paint": "Silver", "price": 250 },
-        { "id": 2, "paint": "Midnight Blue", "price": 275 },
-        { "id": 3, "paint": "Firebrick Red", "price": 300 },
-        { "id": 4, "paint": "Spring Green", "price": 325 }
-    ],
-    "interior": [
-        { "id": 1, "interior": "Beige Fabric", "price": 500 },
-        { "id": 2, "interior": "Charcoal Fabric", "price": 505 },
-        { "id": 3, "interior": "White Leather", "price": 515 },
-        { "id": 4, "interior": "Black Leather", "price": 525 }
-    ],
-    "technology": [
-        { "id": 1, "technology": "Basic Package", "price": 600 },
-        { "id": 2, "technology": "Navigation Package", "price": 650 },
-        { "id": 3, "technology": "Visibility Package", "price": 700 },
-        { "id": 4, "technology": "Ultra Package", "price": 750 }
-    ],
-    "wheels": [
-        { "id": 1, "wheels": "17-inch Pair Radial", "price": 800 },
-        { "id": 2, "wheels": "17-inch Pair Radial Black", "price": 850 },
-        { "id": 3, "wheels": "18-inch Pair Spoke Silver", "price": 900 },
-        { "id": 4, "wheels": "18-inch Pair Spoke Black", "price": 950 }
-    ]
+  "paint": [
+    {
+      "id": "1",
+      "paint": "Silver",
+      "price": 250
+    },
+    {
+      "id": "2",
+      "paint": "Midnight Blue",
+      "price": 275
+    },
+    {
+      "id": "3",
+      "paint": "Firebrick Red",
+      "price": 300
+    },
+    {
+      "id": "4",
+      "paint": "Spring Green",
+      "price": 325
+    }
+  ],
+  "interior": [
+    {
+      "id": "1",
+      "interior": "Beige Fabric",
+      "price": 500
+    },
+    {
+      "id": "2",
+      "interior": "Charcoal Fabric",
+      "price": 505
+    },
+    {
+      "id": "3",
+      "interior": "White Leather",
+      "price": 515
+    },
+    {
+      "id": "4",
+      "interior": "Black Leather",
+      "price": 525
+    }
+  ],
+  "technology": [
+    {
+      "id": "1",
+      "technology": "Basic Package",
+      "price": 600
+    },
+    {
+      "id": "2",
+      "technology": "Navigation Package",
+      "price": 650
+    },
+    {
+      "id": "3",
+      "technology": "Visibility Package",
+      "price": 700
+    },
+    {
+      "id": "4",
+      "technology": "Ultra Package",
+      "price": 750
+    }
+  ],
+  "wheels": [
+    {
+      "id": "1",
+      "wheels": "17-inch Pair Radial",
+      "price": 800
+    },
+    {
+      "id": "2",
+      "wheels": "17-inch Pair Radial Black",
+      "price": 850
+    },
+    {
+      "id": "3",
+      "wheels": "18-inch Pair Spoke Silver",
+      "price": 900
+    },
+    {
+      "id": "4",
+      "wheels": "18-inch Pair Spoke Black",
+      "price": 950
+    }
+  ],
+  "orders": [
+    {
+      "id": "dbb5",
+      "interior": "Beige Fabric",
+      "paint": "Silver",
+      "technology": "Basic Package",
+      "wheels": "17-inch Pair Radial Black"
+    },
+    {
+      "id": "d113",
+      "interior": null,
+      "paint": null,
+      "technology": null,
+      "wheels": null
+    },
+    {
+      "id": "9308",
+      "interior": null,
+      "paint": null,
+      "technology": null,
+      "wheels": null
+    },
+    {
+      "id": "a938",
+      "interior": "Beige Fabric",
+      "paint": "Silver",
+      "technology": "Basic Package",
+      "wheels": "17-inch Pair Radial Black"
+    },
+    {
+      "id": "be2f",
+      "interior": null,
+      "paint": null,
+      "technology": null,
+      "wheels": null
+    },
+    {
+      "id": "e196",
+      "interior": "Beige Fabric",
+      "paint": "Silver",
+      "technology": "Basic Package",
+      "wheels": "17-inch Pair Radial Black"
+    },
+    {
+      "id": "bec9",
+      "interior": null,
+      "paint": null,
+      "technology": null,
+      "wheels": null
+    },
+    {
+      "id": "6508",
+      "interior": null,
+      "paint": null,
+      "technology": null,
+      "wheels": null
+    },
+    {
+      "id": "d765",
+      "interior": "Beige Fabric",
+      "paint": "Silver",
+      "technology": "Basic Package",
+      "wheels": "17-inch Pair Radial Black"
+    },
+    {
+      "id": "b40f",
+      "interior": "Black Leather",
+      "paint": "Spring Green",
+      "technology": "Ultra Package",
+      "wheels": "18-inch Pair Spoke Black"
+    },
+    {
+      "id": "95ee",
+      "interior": null,
+      "paint": null,
+      "technology": null,
+      "wheels": null
+    },
+    {
+      "id": "6a71",
+      "interior": null,
+      "paint": null,
+      "technology": null,
+      "wheels": null
+    }
+  ]
 }

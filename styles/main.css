@@ -1,5 +1,31 @@
-.dropdown-container {
+#container {
     display: flex;
+    flex-direction: column; 
     flex-wrap: wrap;
     gap: 20px; /* Adjust spacing */
 }
+
+.dropdown-container { 
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing */
+} 
+
+#orders-container { 
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing */
+} 
+
+#orders-container button {
+    width: auto; /* Makes button fit its content */
+    padding: 10px 20px; /* Adds padding for better appearance */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ensures it doesn’t stretch */
+    max-width: 200px; /* Prevents it from becoming too wide */
+}
+
