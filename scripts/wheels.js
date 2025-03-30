@@ -1,4 +1,4 @@
-import { getTransientState, setWheels } from "./transientState.js";
+import { setWheels } from "./transientState.js";
 
 export const DisplayWheelOptions = async () => {
     const response = await fetch("http://localhost:8088/wheels");
@@ -9,7 +9,7 @@ export const DisplayWheelOptions = async () => {
     html += `<option value="0">Select a wheel</option>`;
 
     const arrayOfOptions = wheels.map ( (wheel) => {
-        return `<option value="${wheel.id}>${wheel.wheels}</option>`;
+        return `<option value="${wheel.id}">${wheel.style}</option>`;
     })
 
     html += arrayOfOptions.join("");
@@ -21,8 +21,8 @@ export const DisplayWheelOptions = async () => {
 // Wheels dropdown event listener
 document.addEventListener("change", (event) => {
     if (event.target.id === "wheels") {
-        // Get text content
-        const selectedOption = event.target.selectedOptions[0].textContent; 
+        const selectedOption = parseInt(event.target.value);
+
         // Set transient state
         setWheels(selectedOption);
     }

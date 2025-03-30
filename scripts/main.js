@@ -12,19 +12,16 @@ const optionRenderers = [DisplayInteriorOptions, DisplayPaintOptions, DisplayTec
 const render = async () => {
     const dropdowns = await Promise.all(optionRenderers.map(fn => fn()));
     const orderButtonHTML = PlaceOrderButton();
-    const ordersHTML = FetchAndDisplayOrders();
 
-    let html = `
+    container.innerHTML = `
         <div class="dropdown-container">
             ${dropdowns.map(dropdown => `<div class="dropdown">${dropdown}</div>`).join("")}
         </div>
         <div id="orders-container">
             ${orderButtonHTML}
-            ${ordersHTML}
         </div>`;
 
-    container.innerHTML = html;
-
+    await FetchAndDisplayOrders();
 }
 
 render();

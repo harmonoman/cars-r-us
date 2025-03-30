@@ -1,25 +1,25 @@
 const transientState = {
-    interior: null,
-    paint: null,
-    technology: null,
-    wheels: null
+    interiorId: 0,
+    paintId: 0,
+    technologyId: 0,
+    wheelsId: 0
 }
 
 // Setter functions
 export const setInterior = (selectedInterior) => {
-    transientState.interior = selectedInterior;
+    transientState.interiorId = selectedInterior;
 }
 
 export const setPaint = (selectedPaint) => {
-    transientState.paint = selectedPaint;
+    transientState.paintId = selectedPaint;
 }
 
 export const setTechnology = (selectedTechnology) => {
-    transientState.technology = selectedTechnology;
+    transientState.technologyId = selectedTechnology;
 }
 
 export const setWheels = (selectedWheels) => {
-    transientState.wheels = selectedWheels;
+    transientState.wheelsId = selectedWheels;
 }
 
 // Return transientState
@@ -29,14 +29,16 @@ export const getTransientState = () => {
 
 // Reset transientState
 export const resetTransientState = () => {
-    transientState.interior = null;
-    transientState.paint = null;
-    transientState.technology = null;
-    transientState.wheels = null;
+    transientState.interiorId = 0;
+    transientState.paintId = 0;
+    transientState.technologyId = 0;
+    transientState.wheelsId = 0;
 }
 
 // PLace an order
 export const saveOrder = async () => {
+
+    console.log(transientState)
     const postOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },

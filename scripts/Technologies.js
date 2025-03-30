@@ -1,7 +1,7 @@
-import { getTransientState, setTechnology } from "./transientState.js";
+import { setTechnology } from "./transientState.js";
 
 export const DisplayTechnologyOptions = async () => {
-    const response = await fetch("http://localhost:8088/technology");
+    const response = await fetch("http://localhost:8088/technologies");
     const technologies = await response.json();
 
     let html = `<h2>Technologies</h2>`;
@@ -9,7 +9,7 @@ export const DisplayTechnologyOptions = async () => {
     html += `<option value="0">Select a technology package</option>`;
 
     const arrayOfOptions = technologies.map( (technology) => {
-        return `<option value="${technology.id}">${technology.technology}</option>`;
+        return `<option value="${technology.id}">${technology.package}</option>`;
     })
 
     html += arrayOfOptions.join("");
@@ -21,8 +21,8 @@ export const DisplayTechnologyOptions = async () => {
 // Technologies dropdown event listener
 document.addEventListener("change", (event) => {
     if (event.target.id === "technology") {
-        // Get text content
-        const selectedOption = event.target.selectedOptions[0].textContent; 
+        const selectedOption = parseInt(event.target.value);
+
         // Set transient state
         setTechnology(selectedOption);
     }
