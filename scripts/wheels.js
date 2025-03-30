@@ -27,4 +27,3 @@ document.addEventListener("change", (event) => {
         setWheels(selectedOption);
     }
 })
-
