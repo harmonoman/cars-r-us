@@ -13,7 +13,7 @@ export const PlaceOrderButton = () => {
 
 export const FetchAndDisplayOrders = async () => {
     try {
-        const response = await fetch("http://localhost:8088/orders?_expand=paint&_expand=interior&_expand=technology&_expand=wheels");
+        const response = await fetch("http://localhost:8088/orders?_expand=paint&_expand=interior&_expand=technology&_expand=wheels&_expand=model");
         const orders = await response.json();
 
         const orderContainer = document.querySelector("#orders-container");
@@ -26,7 +26,7 @@ export const FetchAndDisplayOrders = async () => {
             const technologyPrice = order.technology.price.toLocaleString("en-US", { style: "currency", currency: "USD" });
             const wheelsPrice = order.wheels.price.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
-            const totalPrice = (order.paint.price + order.interior.price + order.technology.price + order.wheels.price)
+            const totalPrice = ((order.paint.price + order.interior.price + order.technology.price + order.wheels.price) * order.model.multiplier)
                 .toLocaleString("en-US", { style: "currency", currency: "USD" });
         
         return `
@@ -36,6 +36,7 @@ export const FetchAndDisplayOrders = async () => {
                 <p>Interior: ${order.interior.fabric} ${interiorPrice}</p>
                 <p>Technology: ${order.technology.package} ${technologyPrice}</p>
                 <p>Wheels: ${order.wheels.style} ${wheelsPrice}</p>
+                <p>Model: ${order.model.type}</p>
                 <p>Total: ${totalPrice}</p>
             </div>
         `}).join("");

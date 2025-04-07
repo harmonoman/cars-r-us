@@ -2,7 +2,8 @@ const transientState = {
     interiorId: 0,
     paintId: 0,
     technologyId: 0,
-    wheelsId: 0
+    wheelsId: 0,
+    modelId: 0
 }
 
 // Setter functions
@@ -22,6 +23,10 @@ export const setWheels = (selectedWheels) => {
     transientState.wheelsId = selectedWheels;
 }
 
+export const setModel = (selectedModel) => {
+    transientState.modelId = selectedModel;
+}
+
 // Return transientState
 export const getTransientState = () => {
     return structuredClone(transientState);
@@ -33,6 +38,7 @@ export const resetTransientState = () => {
     transientState.paintId = 0;
     transientState.technologyId = 0;
     transientState.wheelsId = 0;
+    transientState.modelId = 0;
 }
 
 // PLace an order

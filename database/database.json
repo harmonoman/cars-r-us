@@ -87,20 +87,47 @@
       "price": 950
     }
   ],
+  "models": [
+    {
+      "id": 1,
+      "type": "Car",
+      "multiplier": 1
+    },
+    {
+      "id": 2,
+      "type": "SUV",
+      "multiplier": 1.5
+    },
+    {
+      "id": 3,
+      "type": "Truck",
+      "multiplier": 2.25
+    }
+  ],
   "orders": [
     {
       "interiorId": 1,
-      "paintId": 2,
-      "technologyId": 3,
-      "wheelsId": 4,
+      "paintId": 1,
+      "technologyId": 1,
+      "wheelsId": 1,
+      "modelId": 1,
       "id": 1
     },
     {
-      "interiorId": 2,
-      "paintId": 4,
+      "interiorId": 1,
+      "paintId": 1,
       "technologyId": 1,
-      "wheelsId": 3,
+      "wheelsId": 1,
+      "modelId": 2,
       "id": 2
+    },
+    {
+      "interiorId": 1,
+      "paintId": 1,
+      "technologyId": 1,
+      "wheelsId": 1,
+      "modelId": 3,
+      "id": 3
     }
   ]
 }
