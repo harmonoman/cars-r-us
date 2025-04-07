@@ -9,7 +9,7 @@ export const DisplayPaintOptions = async () => {
     html += `<select id="paint">`;
     html += `<option value="0">Select a paint</option> `;
 
-    const arrayOfOptions = paints.map( (paint) => {
+    const arrayOfOptions = paints.map((paint) => {
         return `<option value="${paint.id}">${paint.color}</option>`;
     })
 

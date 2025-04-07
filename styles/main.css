@@ -12,6 +12,11 @@
     gap: 20px; /* Adjust spacing */
 } 
 
+.model-options { 
+    display: flex;
+    flex-direction: row; 
+} 
+
 #orders-container { 
     display: flex;
     flex-direction: column; 
